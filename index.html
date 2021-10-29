@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6" lang="ko"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="ko"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="ko"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="ko"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ko"> <!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>일진머티리얼즈</title>
+	<!-- 파비콘  -->
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+
+    <!-- 오픈그래픽 기본 정보 -->
+    <meta property="og:title" content="일진머티리얼즈">
+    <meta property="og:image" content="open_title.jpg">
+    <meta property="og:description" content="일진머티리얼즈 리뉴얼">
+
+
+<!-- jquery -->
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+<!-- slick -->
+<script type="text/javascript" src="./js/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/slick.css" />
+<!-- bxslider -->
+<script type="text/javascript" src="./js/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/jquery.bxslider.css" />
+<!-- fullpage -->
+<link rel="stylesheet" type="text/css" href="./css/jquery.fullpage.min.css" />
+<script type="text/javascript" src="./js/jquery.fullpage.min.js"></script>
+<!-- swiper -->
+<link rel="stylesheet" type="text/css" href="./css/swiper.min.css" />
+<script type="text/javascript" src="./js/swiper.min.js"></script>
+<!-- 공통 css/js -->
+<script src="./js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/common.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script type="text/javascript" src="./js/jquery.counterup.min.js"></script><!-- 숫자모션 js -->
+<script src="./js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/index_pc.css" media="screen and (min-width:1280px)"/>
+<link rel="stylesheet" type="text/css" href="./css/index_tablet.css" media="screen and (min-width:768px) and (max-width:1279px)" />
+<link rel="stylesheet" type="text/css" href="./css/index_m.css" media="screen and (max-width:767px)"/>
+<script src="./js/gsap.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script>WebFont.load({google: {families: ['Noto Sans KR', 'Montserrat']}});</script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		if($('html').is('.ie6, .ie7, .ie8, .ie9')) {
+			$('div.ie_alert_text').show();
+			$('div.ie_alert_text').html('현재 사이트는 IE9 이하의 하위브라우저를 지원하지 않습니다. <br />브라우저를 최신 버전으로 <b>업데이트</b>해 주세요.');
+		}
+		
+			LangChk = 0;
+			$(".lang_tit").click(function(){
+				if(LangChk == 0){
+					$(".lang_box").slideDown();
+					LangChk = 1;
+				}else{
+					$(".lang_box").slideUp();
+					LangChk = 0;
+				}
+			});
+	
+		$('.toggle_menu').on('click', function() {
+			$('.toggle_menu>span').stop().toggleClass('on');
+			$(this).stop().toggleClass('on');
+		});
+	
+		chkNum = 0;
+		$(".toggle_menu").click(function(){
+			if(chkNum == 0){
+				$(".toggle_menu>span").stop().addClass('on');
+				$('header').stop().addClass('view');
+				$('.gnb_r').stop().addClass('on');
+				$(this).stop().addClass('on');
+				$(".allmenu").slideDown();
+				chkNum = 1;
+			}else{
+				$(".toggle_menu>span").stop().removeClass('on');
+				$('header').stop().removeClass('view');
+				$('.gnb_r').stop().removeClass('on');
+				$(this).stop().removeClass('on');
+				$(".allmenu").slideUp();
+				chkNum = 0;
+			}		
+		});
+		$(window).resize(function(){
+			ww = $(window).width();
+			if(ww < 1400){
+				$("body").addClass("mobile");
+				$(".allmenu .innerwrap .menubox ul").hide();
+			}else{
+				$("body").removeClass("mobile");
+				$(".allmenu .innerwrap .menubox ul").show();
+			}		
+		}).resize();
+		$(document).on("click",".mobile .allmenu .innerwrap .menubox h2",function(){
+			if($(this).attr("class") == "slideM act"){				
+				$(this).next("ul").slideUp(300);				
+			}else{
+				$(this).next("ul").slideDown(300);				
+			}			
+			$(this).toggleClass("act");
+			$(this).parent(".menubox").siblings().find("h2").removeClass("act");
+			$(this).parent(".menubox").siblings().find("ul").slideUp();
+		})
+	
+		$("#wrap header .gnb").hover(function(){
+			$(this).addClass("on");
+			$(this).find(".sub_menu").show();
+		},function(){
+			$(this).removeClass("on");
+			$(this).find(".sub_menu").hide();
+		})
+	
+	
+		//top_btn
+	
+		$("#top_btn").click(function(){
+			$('body,html').animate({scrollTop: 0}, 300);
+		});
+	
+		$('.top_btn').click(function() {
+		  $.fn.fullpage.moveTo(1);
+		});
+		$('.scroll_btn').click(function() {
+		  $.fn.fullpage.moveTo(2);
+		});
+	
+	});
+	
+	</script>
+<style>
+
+/* 3팀 제작 top버튼 스타일 */
+.btn-scroll {
+    /* outline: 1px solid blue; */
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    position: fixed;
+  }
+
+
+</style>
+
+
+</head>
+
+<body>
+
+
+
+
+	
+	<a href="#contents" id="skip-nav" tabIndex="0">본문 바로가기</a>
+	<!-- 하위 브라우저 지원 불가 알림창 -->
+	<div class="ie_alert_text"></div>
+	<div id="bg"></div>
+	<div id="wrap">
+		<div id="con-popup" class="popup"></div>
+		<div id="con2-popup" class="popup"></div>
+		<div id="con3-popup" class="popup"></div>
+
+
+		<header>
+			<div class="header">
+				<div class="inner_wrap">
+					<h1 class="logo">
+						<a href="#">
+							<span class="blind">타이틀</span>
+							<img src="./img/common/logo.png" alt="타이틀" />
+						</a>
+					</h1>
+					<div id="main_nav">
+						<h1 class="blind">메뉴</h1>
+						<ul class="gnb">
+							<li class="menu menu1">
+								<a href="sub1.html" class="dep1">회사소개</a>
+								<div class="sub_menu">
+									<ul class="dep2">
+										<li><a href="sub1.html">기업소개</a></li>
+										<li><a href="#">CEO인사말</a></li>
+										<li><a href="#">연구개발</a></li>
+										<li><a href="#">인재채용</a></li>
+										<li><a href="#">윤리경영</a></li>
+										<li><a href="sub2.html">사업장안내</a></li>								
+									</ul>
+								</div>
+							</li>
+							<!-- menu -->
+							<li class="menu menu2">
+								<a href="sub3.html" class="dep1">사업/제품</a>
+								<div class="sub_menu">
+									<ul class="dep2">
+										<li><a href="sub3.html">Elecfoil사업</a></li>
+										<li><a href="#">Energy사업</a></li>
+										<li><a href="#">관계사</a></li>								
+									</ul>
+								</div>
+							</li>
+							<!-- menu -->
+							<li class="menu menu3">
+								<a href="#" class="dep1">연구개발</a>
+								<div class="sub_menu">
+									<ul class="dep2">
+										<li><a href="#">연구소개</a></li>
+										<li><a href="#">기술개발 성과</a></li>
+										<li><a href="#">주요연혁</a></li>								
+									</ul>
+								</div>
+							</li>
+							<!-- menu -->
+							<li class="menu menu4">
+								<a href="#" class="dep1">홍보센터</a>
+								<div class="sub_menu">
+									<ul class="dep2">
+										<li><a href="#">기업소식</a></li>
+										<li><a href="#">홍보영상</a></li>
+										<li><a href="#">카탈로그</a></li>								
+									</ul>
+								</div>
+							</li>
+							<!-- menu -->
+							<li class="menu menu5">
+								<a href="#" class="dep1">투자정보</a>
+								<div class="sub_menu">
+									<ul class="dep2">
+										<li><a href="#">경영정보</a></li>
+										<li><a href="#">재무정보</a></li>
+										<li><a href="#">공시정보</a></li>
+										<li><a href="#">전자공고</a></li>
+										<li><a href="#">IR문의</a></li>
+																											
+									</ul>
+								</div>
+							</li>
+							
+							<!-- menu -->
+							<li class="menu menu5">
+						 
+							</li>
+						</ul>
+						<!-- gnb -->
+						<div class="gnb_r">
+							<div class="util">
+								
+							</div>
+							<div class="toggle">
+								<button class="toggle_menu">
+									<span></span>
+									<span></span>
+									<span></span>
+								</button>
+							</div>
+						</div><!-- gnb_r -->
+					</div>
+				</div><!-- inner_wrap -->
+			</div>
+			<div class="allmenu">
+				<div class="innerwrap">			
+					<div class="menu_wrap">
+						<div class="menubox">
+							<h2 class="slideM">회사소개</h2>
+							<ul>
+								<li><a href="sub1.html">기업소개</a></li>
+								<li><a href="#">CEO인사말</a></li>
+								<li><a href="#">연구개발</a></li>
+								<li><a href="#">인재채용</a></li>
+								<li><a href="#">윤리경영</a></li>
+								<li><a href="sub2.html">사업장안내</a></li>
+		
+							</ul>
+						</div>
+						<div class="menubox">
+							<h2 class="slideM">사업/제품</h2>
+							<ul>
+								<li><a href="sub3.html">Elecfoil사업</a></li>
+								<li><a href="#">Energy사업</a></li>
+								<li><a href="#">관계사</a></li>
+							</ul>
+						</div>
+						<div class="menubox">					
+							<h2 class="slideM">연구소</h2>
+							<ul>		
+								<li><a href="#">연구소소개</a></li>
+								<li><a href="#">기술개발 성과</a></li>
+								<li><a href="#">주요연혁</a></li>						
+							</ul>
+						</div>
+						<div class="menubox">
+							<h2 class="slideM">홍보센터</h2>
+							<ul>					
+		
+								<li><a href="#">기업소식</a></li>
+								<li><a href="#">홍보영상</a></li>
+								<li><a href="#">카탈로그</a></li>
+							</ul>
+						</div>
+						<div class="menubox">
+							<h2 class="slideM">투자정보</h2>	
+							<ul>						
+								<li><a href="#">경영정보</a></li>
+								<li><a href="#">재무정보</a></li>
+								<li><a href="#">공시정보</a></li>
+								<li><a href="#">전자공고</a></li>
+								<li><a href="#">IR문의</a></li>
+		
+							</ul>
+						</div>			
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+
+
+
+
+
+
+
+
+		<div id="contents">
+			<div id="container">
+				<main role="main">
+
+					<!-- img_box를 추가하면 배경 이미지가 추가됨  -->
+
+					<div id="fullpage">
+						<script type="text/javascript">
+							$(function () {
+								bx_visual = $('.bx_visual').bxSlider({
+									//mode: 'horizontal',
+									mode: 'fade',
+									auto: true,
+									pause: 5500,//멈춤 대기
+									speed: 700, // 이동 속도
+									pager: true,
+									infiniteLoop: true,
+									autoControls: true,
+									stopAutoOnClick: true,
+							
+									onSliderLoad: function ($currentIndex) {
+										$('.bx_visual li:eq(0)').addClass("on");
+										gsap.set($('.bx_visual li:eq(0) .tit'), { autoAlpha: 0 });
+										gsap.set($('.bx_visual li:eq(0) .s_tit'), { autoAlpha: 0, x: -40 });
+										gsap.to($('.bx_visual li:eq(0) .tit'), 1.3, { autoAlpha: 1 });
+										gsap.to($('.bx_visual li:eq(0) .s_tit'), 1.3, { autoAlpha: 1, x: 0, delay: .4 });
+									},
+									onSlideAfter: function ($slideElement, oldIndex, newIndex) {
+										$('.bx_visual li:eq(' + oldIndex + ')').removeClass("on");
+										$('.bx_visual li:eq(' + newIndex + ')').addClass("on").siblings().removeClass("on");
+									},
+									onSlideBefore: function ($slideElement, oldIndex, newIndex) {
+										if (newIndex != 2) {
+											gsap.set($('.bx_visual li:not(:nth-child(3)) .tit'), { autoAlpha: 0 });
+											gsap.set($('.bx_visual li .s_tit'), { autoAlpha: 0, x: -40 });
+											gsap.to($('.bx_visual li:eq(' + newIndex + ') .tit'), 1.3, { autoAlpha: 1 });
+										}
+										gsap.to($('.bx_visual li:eq(' + newIndex + ') .s_tit'), 1.3, { autoAlpha: 1, x: 0, delay: .4 });
+									},
+
+								});
+								$(document).on("click", ".bx-next, .bx-prev, .bx-pager-link", function () {
+									bx_visual.stopAuto();
+									bx_visual.startAuto();
+								})
+
+							});
+						</script>
+
+
+						<section class="section section1 media_height">
+							<span class="item"></span>
+							<ul class="bx_visual">
+								<li class="first">
+									<div class="img_box v1"></div>
+									<div class="tit_box t1">
+										<p class="tit">ELECFOIL BUSINESS <span class="ptbr"></span> DIVISON</p>
+										<p class="s_tit">고부가치의 ELECFOIL 신제품개발로 <span class="ptbr"></span>첨단 전자기기의 진화를 이끌고 있습니다.</p>										
+										<p class="s_tit1"><input type='button' value='READ MORE' onclick="location.href='sub3.html';" 
+											style="background-color:black; border: none; color:white; width:110px; height:40px; font-size: 16px; font-weight: bold; margin-bottom: 40px; cursor: pointer;"/></p>
+									</div>									
+								</li>
+
+								<li>
+									<div class="img_box v2"></div>
+									<div class="tit_box t2">
+										<p class="tit">ENERGY BUSINESS <span class="ptbr"></span> DIVISION</p>
+										<p class="s_tit">리튬 2차전지의 핵심소재 생산으로<span class="ptbr"></span>행복한 미래를 위한 성장 에너지를 제공합니다.</p>
+										<p class="s_tit1"><input type='button' value='READ MORE' onclick="" 
+									     	style="background-color:red; border: none; color:white; width:110px; height:40px; font-size: 16px; font-weight: bold; margin-bottom: 40px;"/></p>
+									</div>
+								</li>
+															
+							</ul>
+						</section>
+
+						
+
+						<section class="section section2 media_height"> 
+							<div class="inner_wrap">
+								
+								<div class="con_wrap">
+									<div class="area_l con">
+								
+										<div class="img img2">
+											<a href="sub1.html">
+												<span class="img_area"><img src="./img/main/s3_img_box00.jpg"
+														alt="" /></span>
+								
+											</a>
+										</div>
+										<div class="img img3">
+											<a href="sub3.html">
+												<span class="img_area"><img src="./img/main/s3_img_box01.jpg"
+														alt="" /></span>
+								
+											</a>
+										</div>
+									</div>
+									<div class="area_r con">
+										<div class="img img4">
+											<a href="#">
+												<span class="img_area"><img src="./img/main/s3_img_box02.jpg"
+														alt="" /></span>											
+											</a>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</section>
+
+
+						<section class="section section3 media_height">
+							<div class="inner_wrap">
+								<div class="main_tit">
+									<p class="m_tit">Notice & News</p>																					
+								</div>
+								
+
+								<!-- main_tit -->
+								<div class="con_wrap">
+									<div class="area_l con">
+										<div class="img img1">
+											<a href="#">
+												<span class="img_area"><img src="./img/main/s4_img000.jpg" alt="" /></span>												
+											</a>
+										</div>
+
+										<div class="img img2">
+											<a href="#">
+												<span class="img_area"><img src="./img/main/s4_img001.png" alt="" /></span>												
+											</a>
+										</div>
+										<div class="img img3">
+											<a href="#">
+												<span class="img_area"><img src="./img/main/s4_img002.png" alt="" /></span>												
+											</a>
+										</div>
+										<div class="img img3-1">
+											<a href="#">
+												<span class="img_area"><img src="./img/main/s4_img003.png" alt="" /></span>												
+											</a>
+										</div>
+									</div>
+									<div class="area_r con">
+										<div class="img img4">
+											<!-- <a href="#">
+												<span class="img_area"><img src="./img/main/s4_img003.png" alt="" /></span>												
+											</a> -->
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</section>
+
+
+
+						<section class="section fp-auto-height">
+							<div class="section7">
+
+							<footer>
+								<div class="wrap">
+									<div class="area_t">
+										<div class="inner_wrap">
+											<ul class="privacy_list">
+												<li><a href="#none" class="data_link p_link2" data-link="report1">개인정보취급방침</a></li>
+												<li><a href="#none" class="data_link p_link1" data-link="email1">이메일무단수집거부</a></li>
+												<li><a href="#none" class="data_link p_link1" data-link="email1">법적고지</a></li>
+												<li><a href="#none" class="data_link p_link1" data-link="email1">이메일문의</a></li>
+												<div class="info">
+													<p class="addr"><span>서울특별시 마포구 마포대로 45(도화동) TEL: 02-707-9130</span></p>													
+												</div>
+											</ul>											
+										</div>
+									</div>
+									<div class="area_b">
+										<div class="inner_wrap">
+											<p class="copy">COPYRIGHTⓒ ILJIN MATERIALS CO., Ltd. ALL RIGHTS RESERVED</p>											
+										</div>
+										<div class="inner_wrap">
+											<span class="foot_logo"><img src="./img/sub3_logo_w.png" alt="로고" /></span>
+										</div>
+										
+									</div>
+								</div>
+							</footer>
+							
+						 </section> 
+					</div>
+						
+
+<!-- 기존 탑버튼 (점검중)-->
+					<!-- <div class="page_top">
+						<button type="button" id="top_btn">TOP</button>
+					</div> -->
+
+<!-- 3팀 제작 탑버튼 -->
+<div class="btn-scroll">
+	<a href="index.html">
+		<img src="./img/sub3_topbtn.png" alt="TOP버튼">
+	</a>
+</div> 
+
+</main>
+</div>
+<!--//container-->
+</div>
+<!--//contents -->
+
+</div>
+<!--//wrap-->	
+</html>
+
+
+</body>
+
+<script type="text/javascript">
+	$(function () {
+		$(window).scroll(function () {
+			var scrollT = $(window).scrollTop();
+			
+			if (scrollT > 0) {
+				$('.page_top').fadeIn();
+			} else {
+				$('.page_top').fadeOut();
+			}
+		})
+		$("#top_btn").click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 300);
+		});
+		
+	});
+	
+	function checkOffset() {
+		var a = $(document).height() - $(window).height();
+		var b = $('footer').height();
+		scroll = $(window).scrollTop();
+		
+		if (scroll > a - b) {
+			$(".page_top").css("position", "absolute");
+		} else {
+			$(".page_top").css("position", "fixed");
+		}
+	}
+	$(document).ready(checkOffset);
+	$(document).scroll(checkOffset);
+</script>
+<script type="text/javascript">
+	$(function () {
+		$('#fullpage').fullpage({
+			verticalCentered: false,
+			lockAnchors: true,
+			responsiveHeight: 600,
+			recordHistory: false,
+			afterLoad: function (anchorLink, index) {
+				$('.section' + index).addClass('ani');
+				if (index != 1) {
+					$("header").addClass('on')
+				} else {
+					$("header").removeClass('on')
+				}
+				if (index == 4) {
+					//loadedSection.addClass("in-view")
+					$('.section4 .num').delay(1000).counterUp({
+						delay: 10,
+						time: 1000
+					});
+				}
+				if (index == 6) {
+					//loadedSection.addClass("in-view")
+					$('.section6 .area_r .num').counterUp({
+						delay: 10,
+						time: 1000
+					});
+				}
+			},
+			afterRender: function () {
+				$('#side_nav li:eq(0)').addClass('on');
+			},
+			onLeave: function (anchorLink, destination, direction) {
+				$('#side_nav li').removeClass('on');
+				$('#side_nav li:nth-child(' + destination + ')').addClass('on');
+				if (destination === 1) {
+					$(".page_top").fadeOut();
+				} else {
+					$(".page_top").fadeIn();
+				}
+				if (anchorLink == 7 && direction == 'down') {
+					$('.side_nav').css('opacity', '0').css('top', '30%');
+				}
+				if (anchorLink == 8 && direction == 'up') {
+					$('.side_nav').delay(500).css('opacity', '1').css('top', '50%');
+				}
+			}
+		});
+		$('#top_btn').click(function () {
+			$.fn.fullpage.moveTo(1);
+		});
+	
+		
+		$(document).on('click', '#side_nav .side_list > li > a', function () {
+			var $selector = $('#side_nav .side_list > li');
+			var Anchors = $selector.find('> a').index(this);
+			$selector.removeClass('on');
+			$selector.eq(Anchors).addClass('on');
+			$.fn.fullpage.moveTo(Anchors + 1);
+			return false;
+		});
+		
+		$('.section1 .vertical_slide').bxSlider({
+			auto: true,
+			autoControls: true,
+			stopAutoOnClick: true,
+			pager: true,
+			slideWidth: 600
+		});
+		
+			
+
+	});
+</script>
