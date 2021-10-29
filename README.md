@@ -1,1 +1,3 @@
-# Iljin-Materials-
+# Iljin-Materials 리뉴얼
+
+일진 머티리얼즈 홈페이지 리뉴얼: 메인페이지 / 회사소개 / 오시는 길 / 제품소개
