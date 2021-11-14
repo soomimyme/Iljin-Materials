@@ -208,7 +208,6 @@ button{background:0;border:0;outline:0;font-size:inherit}
 	background: #FF7F00;
 	margin: 11px auto 25px;
 }
-.allmenu .innerwrap .menubox ul{}
 .allmenu .innerwrap .menubox ul li{margin-bottom: 8px;}
 .allmenu .innerwrap .menubox ul li a{font-size: 18px;color: #333;}
 .allmenu .innerwrap .menubox ul li:hover a{color:#1390c7;}
@@ -268,7 +267,6 @@ button{background:0;border:0;outline:0;font-size:inherit}
 	#wrap header .m_util .lang_box{display:none; }
 	#wrap header .m_util .lang_box .lang_list{padding: 10px 20px 0 0;box-sizing:border-box;}
 	#wrap header .m_util .lang_box .lang_list:after{display:block; content:""; clear:both;}
-	#wrap header .m_util .lang_box .lang_list p{}
 	#wrap header .m_util .lang_box .lang_list a{font-size: 14px;padding: 5px 0;display: block;}
 	.allmenu .innerwrap .menubox{width:100%;height:auto;padding:0 20px;box-sizing:border-box;text-align: right;border-top: 1px solid #ccc;}
 	.allmenu .innerwrap .menubox h2{
@@ -287,7 +285,6 @@ button{background:0;border:0;outline:0;font-size:inherit}
 	.allmenu .innerwrap .menubox ul li a{font-size: 18px;color:#555;}
 	.allmenu .innerwrap .menubox ul li a:hover{color:#000;}
 	.allmenu .innerwrap>div{border:0;}
-	.allmenu .menu_wrap{}
 
 }
 
@@ -298,7 +295,6 @@ button{background:0;border:0;outline:0;font-size:inherit}
 #wrap footer .wrap {width: 100%;min-height: 130px;  text-align: center;margin:0 auto;box-sizing: border-box;padding: 10px 0;}
 #wrap footer .wrap .inner_wrap{width:1400px;margin:0 auto;padding: 15px 0;}
 #wrap footer .wrap .inner_wrap:after{display:block; content:""; text-align: center;clear:both;}
-#wrap footer .wrap .area_t .inner_wrap{}
 
 #wrap footer .wrap .info{width: 100%;height: 100%; font-size: 14px; color:#C6C6C6;}
 #wrap footer .wrap .copy{position:absolute;left: 50%; top: 50%;transform:translate(-50%,-50%);margin-top: 36px;z-index:10;text-align: center; color: #9c9c9c ; font-size: 12px;}
@@ -506,7 +502,6 @@ button{background:0;border:0;outline:0;font-size:inherit}
     font-size: 4rem;
     margin-bottom: 50px;
 }
-.popup .agree_wrap{}
 .popup .agree_wrap .box{
     width: 100%;
     height: 300px;
@@ -574,7 +569,6 @@ button{background:0;border:0;outline:0;font-size:inherit}
     width: calc(50% - 15px);
 }
 .popup table input, .popup table select,.popup table textarea{font-size:1.8rem;}
-.popup table input::placeholder,.popup table select::placeholder,.popup table option::placeholder{}
 .popup table textarea{
     width: 100%;
     height: 200px;
@@ -583,7 +577,6 @@ button{background:0;border:0;outline:0;font-size:inherit}
     resize: none;
     border: 0;
 }
-.popup table tr.email{}
 .popup table tr.email .box{
     display: inline-block;
     width: calc(100% - 170px);
