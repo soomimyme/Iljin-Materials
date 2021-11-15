@@ -52,7 +52,7 @@ URL : https://soomimyme.github.io/Iljin-Materials/
 4. 이번에 동박...끝없이 오르는 배터리 소재
 
 
-#### footer
+#### footer (공통)
 
 - 로고
 
