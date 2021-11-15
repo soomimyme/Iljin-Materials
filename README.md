@@ -17,7 +17,7 @@ URL : https://soomimyme.github.io/Iljin-Materials/
 - 로고색상을 메인 컬러로 사용
 
 - favicon 추가
-- 
+
 
 ## 홈페이지 주요 콘텐츠 구성
 
