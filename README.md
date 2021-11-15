@@ -61,6 +61,7 @@ URL : https://soomimyme.github.io/Iljin-Materials/
 - COPYRIGHTⓒ ILJIN MATERIALS CO., Ltd. ALL RIGHTS RESERVED
 
 
+
 ### 회사소개
 
 #### section 1
@@ -74,3 +75,19 @@ URL : https://soomimyme.github.io/Iljin-Materials/
 #### section 3
 
 - FROM BEGIN TO FUTURE / 창립 이후 전자제품의 핵심소재인 Elecfoil 생산에 매진해왔던 일진Materials는 2차전지 산업의 성장과 함께 새로운 전환기를 맞이하였습니다. Elecfoil이 2차전지의 5대 소재 중 하나로 채택된 이후, 제품 중 2차전지용 Elecfoil 비중이 크게 확대 되고 있습니다. 통해 첨단 그린 에너지 소재산업의 성장가능성에 주목한 일진Materials는 특유의 도전정신으로 R&D에 역량을 집중한 결과, 2차전지 분야로 사업영역을 확장하게 되었습니다. 일진Materials는 앞으로 국내 최고 Elecfoil 전문기업으로서의 입지를 확고히 다지는 한편, 신규사업으로 추진하고 있는 5G용 소재의 확장을 통해 소재산업의 글로벌 리더로서 면모를 갖출 것입니다.
+
+
+### 사업장안내
+
+### section 1
+
+- 메인 비주얼 -> 회사 소개
+
+#### section 2
+
+- 사업장안내 / 지도 이미지 -> 구글맵 / 일진그룹[본사]
+
+#### section 3
+
+- 일진머티리얼즈 본사외 사업장입니다.
+- 일진 익산공장 / 일진 삼기공장
