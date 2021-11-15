@@ -30,7 +30,7 @@ URL : https://soomimyme.github.io/Iljin-Materials/
 2. ENERGY BUSINESS DIVISION / 리튬 2차전지의 핵심소재 생산으로 행복한 미래를 위한 성장 에너지를 제공합니다. / +Read More
 
 
-### section 2
+#### section 2
 
 - 회사소개
 
@@ -39,7 +39,7 @@ URL : https://soomimyme.github.io/Iljin-Materials/
 - 경영정보
 
 
-### section 3
+#### section 3
 
 - Notice & News 
 
@@ -52,7 +52,7 @@ URL : https://soomimyme.github.io/Iljin-Materials/
 4. 이번에 동박...끝없이 오르는 배터리 소재
 
 
-### footer
+#### footer
 
 - 로고
 
@@ -66,7 +66,7 @@ URL : https://soomimyme.github.io/Iljin-Materials/
 
 #### section 1
 
-- 메인 비주얼 -> 회사 소개
+- 메인 배너 -> 회사 소개
 
 #### section 2
 
@@ -79,9 +79,9 @@ URL : https://soomimyme.github.io/Iljin-Materials/
 
 ### 사업장안내
 
-### section 1
+#### section 1
 
-- 메인 비주얼 -> 회사 소개
+- 메인 배너 -> 회사 소개
 
 #### section 2
 
@@ -91,3 +91,19 @@ URL : https://soomimyme.github.io/Iljin-Materials/
 
 - 일진머티리얼즈 본사외 사업장입니다.
 - 일진 익산공장 / 일진 삼기공장
+
+
+### 사업/제품
+
+#### section 1
+
+- 메인 배너 -> 사업/제품
+
+#### section 2
+
+- 고부가가치 Elecfoil 신제품 개발로 첨단 전자기기의 진화를 이끌고 있습니다. / Elecfoil이란 이러한 PCB의 회로를 구성하는 얇은 Copper Foil로, Copper Wire를 용해 시킨 CuSO4 전해액으로부터
+Copper를 석출시켜 고객의 요구에 맞도록 첨단 프로세스를 거쳐 TV, 컴퓨터, 휴대폰을 비롯한 전자제품 전반에 사용하는 핵심 소재입니다.
+
+#### section 3
+
+- 생산제품 / 제품 목록 
